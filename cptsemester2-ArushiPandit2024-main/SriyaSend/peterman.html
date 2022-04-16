@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Song Association</title>
+    <link rel="stylesheet" type="text/css" href="styling.css">
+    <style>
+  body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: #050400;
+        perspective: 700px;
+        font-size: clamp(10px, 2vw, 20px);
+        margin-top: 20px;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        color: white;
+      }
+    </style>
+    <script type="text/javascript" src= "peterman.js"></script>
+
+<body>
+    <form name="quiz4" id="quiz4">
+      <div>
+        <p>1. What color is captain hook'd hat?</p>
+  <p><input type="radio" name="question1" value="red">A. red &nbsp  &nbsp  &nbsp  &nbsp <input type="radio" name="question1" value="pink">B. pink &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question1" value="orange">C. orange &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question1" value="purple">D. purple</p>
+ </div>
+<br>
+<br>
+<br>
+ <div>
+   <p>2. Where is tinkerbell? </p>
+<p><input type="radio" name="question2" value="in the water">A. in the water &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question2" value="dancing">B. dancing &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question2" value="flying near peter pan">C. flying near peter pan &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question2" value="fighting captain hook">D. fighting captain hook</p>
+</div>
+<br>
+<br>
+<br>
+
+<div class="lyricStlyle">
+  <p>3. What are the kids doing? </p>
+<p><input type="radio" name="question3" value="screaming">A. screaming &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question3" value="helping peter pan">B. helping peter pan &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question3" value="sleeping">C. sleeping &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question3" value="shouting">D. shouting</p>
+</div>
+
+<br>
+<br>
+<br>
+
+<div>
+  <p>4. What is Wendy holding?</p>
+  <p><input type="radio" name="question4" value="flash light">A. flash light&nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question4" value="umbrella">B. umbrella &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question4" value="keys">C. keys &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question4" value="sword">D. sword</p>
+</div>
+
+<br>
+<br>
+<br>
+
+<div>
+  <p>5. What color is Wendy's hat?</p>
+  <p><input type="radio" name="question5" value="pink">A. pink &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question5" value="white">B. white &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question5" value="red">C. red &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question5" value="black">D. black</p>
+</div>
+
+<br>
+<br>
+<br>
+
+
+ <input type="button" name="" value= "Submit" onclick="check4()" class = "active">
+</form>
+<p id="result"></p>
+
+<script>
+
+function backToHome()
+{
+location.replace("help.html")
+}
+
+
+</script>
+
+<br>
+<button class = "active" onclick= "backToHome()">Home Page</button>
+
+</body>
+</html>

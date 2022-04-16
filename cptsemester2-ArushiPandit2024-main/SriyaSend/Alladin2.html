@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Song Association</title>
+    <link rel="stylesheet" type="text/css" href="styling.css">
+    <style>
+  body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: #050400;
+        perspective: 700px;
+        font-size: clamp(10px, 2vw, 20px);
+        margin-top: 20px;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        color: white;
+      }
+    </style>
+    <script type="text/javascript" src= "Alladin2.js">  </script>
+
+<body>
+    <form name="quiz2" id="quiz2">
+      <div>
+        <p>1. What color is NOT in the sky?</p>
+        <p><input type="radio" name="question1" value="pink">A. pink &nbsp  &nbsp  &nbsp  &nbsp <input type="radio" name="question1" value="green">B. green &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question1" value="blue">C. blue &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question1" value="yelloe">D. yellow</p>
+ </div>
+<br>
+<br>
+<br>
+ <div>
+   <p>2. Where is the genie?</p>
+   <p><input type="radio" name="question2" value="flying">A. flying &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question2" value="on the moon">B. on the moon &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question2" value="on the carpet">C. on the carpet &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question2" value="on the ground">D. on the ground</p>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="lyricStlyle">
+  <p>3. What color is the genie bottle? </p>
+  <p><input type="radio" name="question3" value="gold">A. gold &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question3" value="orange">B. orange &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question3" value="rainbow">C. rainbow &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question3" value="yellow">D. yellow</p>
+</div>
+
+<br>
+<br>
+<br>
+
+<div>
+  <p>4. What is jasmine wearing?</p>
+  <p><input type="radio" name="question4" value="shirt">A. shirt &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question4" value="blue dress">B. bleu dress &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question4" value="teal dress">C. teal dress &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question4" value="skirt">D. skirt</p>
+</div>
+
+<br>
+<br>
+<br>
+
+<div>
+  <p>5. What color is the carpet? </p>
+  <p><input type="radio" name="question5" value="purple">A. purple&nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question5" value="white">B. white&nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question5" value="orange">C. orange &nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question5" value="teal">D. teal</p>
+</div>
+
+<br>
+<br>
+<br>
+
+<div>
+  <p>6. What are Jasmine and Aladin doing?
+  </p>
+  <p><input type="radio" name="question6" value="screaming">A. screaming&nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question6" value="flying">B. flying&nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question6" value="dancing">C. dancing&nbsp  &nbsp  &nbsp  &nbsp<input type="radio" name="question6" value="singing">D. singing</p>
+</div>
+
+<br>
+<br>
+<br>
+ <input type="button" name="" value= "Submit" onclick="check2()" class = "active">
+</form>
+<p id="result"></p>
+
+<script>
+
+function backToHome()
+{
+location.replace("help.html")
+}
+
+
+</script>
+
+<br>
+<button class = "active" onclick= "backToHome()">Home Page</button>
+
+</body>
+</html>
