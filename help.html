@@ -1,0 +1,197 @@
+<html>
+<head>
+<title>Display random images</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<style>
+body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: #050400;
+      perspective: 700px;
+      font-size: clamp(10px, 2vw, 20px);
+      margin-top: 20px;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+    }
+    button {
+      color: var(--color);
+      transition: 0.25s;
+      &:hover,
+      &:focus {
+        border-color: var(--hover);
+        color: #fff;
+      }
+    }
+
+</style>
+
+</head>
+<p id="demo" class = "timer"> 11s</p>
+<style>
+p {
+  font-size: 20px;
+  margin-top:10px;
+}
+
+.timer{
+  color: pink;
+  font-size: 25px;
+}
+</style>
+<body>
+
+
+
+<script>
+
+// Global timercountdown variable
+var timercountdown;
+
+// function getRandomNum(newArray, min, max)
+// {
+//     // generate and return a random number for the image to be displayed
+//    var imgNo = Math.floor(Math.random() * (max - min + 1)) + min;
+//     return (newArray[imgNo], imgNo);
+// }
+
+function startTimercountdown(FileArray, imgNo)
+{
+      // // Set the date we're counting down to
+      timercountdown = 0;
+      const timeInMinutes = 1.3;
+      const currentTime = Date.parse(new Date());
+      var countDownDate = new Date(currentTime + timeInMinutes*10*1000);
+
+      // Update the count down every 1 second
+      timercountdown = setInterval(function() {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var minutes = Math.floor((distance % (1000 * 60 * 10)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
+
+      // If the count down is over, write some text
+      if (distance < 0) {
+          clearInterval(timercountdown);
+          document.getElementById("demo").innerHTML = "TIME IS UP!";
+          document.getElementById("demo").innerHTML = FileArray[imgNo];
+
+          location.replace((FileArray[imgNo]));
+      }
+  }, 1000);
+
+}
+
+function displayRandomImages(arr2)
+{
+
+      // Clear up  timercountdown from any prior run
+      clearInterval(timercountdown);
+
+      var imageArray = new Array();
+
+      imageArray[0] = new Image(950, 700);
+      imageArray[0].src = './mick2.jpeg';
+
+
+      imageArray[1] = new Image(900, 600);
+      imageArray[1].src = './Alladin2.jpeg';
+
+
+      imageArray[2] = new Image(900, 600);
+      imageArray[2].src = './ariel.jpeg';
+
+      imageArray[3] = new Image(900, 700);
+      imageArray[3].src = './Alice1.jpeg';
+
+      imageArray[4] = new Image(980, 700);
+      imageArray[4].src = './theTramp.jpeg';
+
+      imageArray[5] = new Image(700, 600);
+      imageArray[5].src = './peterPan1.jpeg';
+
+      //find the length of the array of images
+      var arrayLength = imageArray.length;
+
+      var newArray = [];
+      for (var i = 0; i < arrayLength; i++) {
+          newArray[i] = new Image();
+          newArray[i].src = imageArray[i].src;
+          newArray[i].width = imageArray[i].width;
+          newArray[i].height = imageArray[i].height;
+      }
+
+      // 0 is first image and (preBuffer.length - 1) is last image of the array
+      // var (newImage, imgNo) = getRandomNum(newArray, 0, newArray.length - 1);
+       var min = 0;
+       var max = newArray.length - 1;
+
+       var imgNo = Math.floor(Math.random() * (max - min + 1)) + min;
+
+
+      // remove the previous images
+      var images = document.getElementsByTagName('img');
+      var l = images.length;
+      for (var p = 0; p < l; p++) {
+         images[p].parentNode.removeChild(images[p]);
+      }
+
+    //  document.getElementById("demo").innerHTML = imageArray[imgNo].src;
+    var fileArray= new Array();
+    fileArray[0] = 'mics.html';
+    fileArray[1] = 'Alladin2.html';
+    fileArray[2]= 'Ariel.html';
+    fileArray[3]= 'Alice1.html';
+    fileArray[4] = 'theTramp.html';
+    fileArray[5]= 'peterman.html';
+
+    // display the new random image
+    document.body.appendChild(imageArray[imgNo]);
+
+    startTimercountdown(fileArray, imgNo);
+document.getElementById("disappears").innerHTML = "";
+
+
+//
+//
+//
+// function displayRandomfiles(var imgNo){
+//   var fileArray= newNewArray();
+//   fileArray[0] = 'mics.html';
+//   fileArray[1] = 'Alladin.html';
+//   fileArray[2] = 'disney-movie-messages-ariel-2.html';
+//   fileArray[3] = 'Snowhite.html';
+//   fileArray[4] = 'Lady-and-the-Tramp-Spaghetti.html';
+//   fileArray[5] = 'Peter-Pan-FLying.html';
+//
+//
+
+}
+
+
+</script>
+
+<body>
+<div>
+<center>
+<h2 style="color:green"> Memory Game</h2>
+<h4> Press the button to display and change the image </h4>
+<h5> Once the button, Displayed Images, is clicked the timer will start </h5>
+<div id="disappears">
+<button onclick="displayRandomImages();"> Display Images </button>
+</div>
+</center>
+</div>
+</body>
+</html>
